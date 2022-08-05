@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+      <div class="container-fluid">
+       <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
+          <div class="col">
+            <div class="card" style="height:15rem">
+              <img src="{% static 'img/cards/calendario.png' %}" class="img-fluid  mx-auto d-block" style="width:35%">
+              <div class="card-body text-center">
+                  <a class="text-decoration-none" href="{% url 'listaejercicios' %}">
+                <h5 class="card-title text-success">Ejercicio</h5>
+                  </a>
+                <p class="card-text">Año en curso de Presupuesto</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="height:15rem" >
+              <img src="{% static 'img/cards/administracion-del-dinero.png' %}" class="img-fluid  mx-auto d-block" style="width:35%">
+               <div class="card-body text-center">
+                   <a class="text-decoration-none" href="{% url 'listapartida' %}">
+                <h5 class="card-title text-success">Partida</h5>
+                   </a>
+                <p class="card-text">Detalle de cada factor dentro del Presupuesto</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card"  style="height:15rem" >
+              <img src="{% static 'img/cards/presupuesto.png' %}" class="img-fluid  mx-auto d-block" style="width:35%">
+               <div class="card-body text-center">
+                <a class="text-decoration-none" href="{% url 'listapresupuesto' %}">
+                  <h5 class="card-title text-success">Presupuesto</h5>
+                </a>
+                <p class="card-text">Reporte Anual del Presupuesto</p>
+              </div>
+            </div>
+          </div>
+
+       </div>
+      </div>
+{% endblock %}

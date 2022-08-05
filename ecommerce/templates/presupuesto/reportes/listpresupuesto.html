@@ -1,0 +1,73 @@
+{##ENLAZADO CON DATOS#}
+
+{% extends 'datos.html' %}
+{% load static %}
+
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%;">Nro</th>
+        <th scope="col" style="width: 20%;">Año
+        <th scope="col" style="width: 20%;">Total Ingresos</th>
+        <th scope="col" style="width: 20%;">Total Egresos</th>
+        <th scope="col" style="width: 20%;">Diferencia</th>
+        <th scope="col" style="width: 20%;">Estado</th>
+        <th scope="col" style="width: 10%;">Acciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+  <tr>
+      <td>001</td>
+      <td>2020</td>
+      <td>$9.300,00</td>
+      <td>$4.150,00</td>
+      <td class="table-success">$5.150,00</td>
+      <td class="table-danger">Inactivo</td>
+      <td class="acciones">
+        <a href="{% url 'reportepresupuesto' %}">👁</a>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</a>
+        </td>
+  </tr>
+  <tr>
+      <td>002</td>
+      <td>2021</td>
+      <td>$4.700,00</td>
+      <td>$6.200,00</td>
+      <td class="table-danger">$-1.500,00</td>
+      <td class="table-danger">Inactivo</td>
+      <td class="acciones">
+        <a href="{% url 'reportepresupuesto' %}">👁</a>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</a>
+      </td>
+  </tr>
+  <tr>
+      <td>003</td>
+      <td>2022</td>
+      <td>$12.700,00</td>
+      <td>$4.200,00</td>
+      <td class="table-success">$8.500,00</td>
+      <td class="table-success">Activo</td>
+      <td class="acciones">
+        <a href="{% url 'reportepresupuesto' %}">👁</a>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</a>
+      </td>
+  </tr>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">***  ADVERTENCIA ***</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿Esta segur@ que desea eliminar este Presupuesto?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a href="{% url 'listapresupuesto' %}" type="button"b class="btn btn-primary">Eliminar</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

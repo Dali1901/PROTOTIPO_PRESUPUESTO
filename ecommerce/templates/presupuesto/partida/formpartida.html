@@ -1,0 +1,30 @@
+{##ENLAZADO CON FORMULARIO#}
+
+{% extends 'formulario.html' %}
+{% load static %}
+
+{% block controls %}
+    <div class="col-md-6">
+        <label for="inputEjercicio" class="form-label">Nro</label>
+
+        <input class="form-control" type="text" placeholder="006" aria-label="Disabled input example" disabled>
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputPartida" class="form-label">Partida</label>
+        <input type="text" class="form-control" id="inputPartida">
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputDescripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" id="inputDescripcion">
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputNaturaleza" class="form-label">Naturaleza</label>
+        <input type="text" class="form-control" id="inputNaturaleza">
+    </div>
+
+{% endblock %}
+
+

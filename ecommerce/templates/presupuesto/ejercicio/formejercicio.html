@@ -1,0 +1,24 @@
+{##ENLAZADO CON FORMULARIO#}
+
+{% extends 'formulario.html' %}
+{% load static %}
+
+{% block controls %}
+    <div class="col-md-6">
+        <label for="inputEjercicio" class="form-label">Id_ejercicio</label>
+
+        <input class="form-control" type="text" placeholder="007" aria-label="Disabled input example" disabled>
+    </div>
+    <div class="col-md-6">
+        <label for="inputAnio" class="form-label">Año</label>
+        <input type="text" class="form-control" id="inputAnio">
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Estado
+            </label>
+        </div>
+    </div>
+{% endblock %}

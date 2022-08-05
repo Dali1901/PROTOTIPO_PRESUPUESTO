@@ -1,0 +1,120 @@
+{##ENLAZADO CON FORMULARIO#}
+
+{% extends 'formulario.html' %}
+{% load static %}
+
+{% block controls %}
+    <div class="col-md-4">
+        <label for="inputAnio" class="form-label">Año</label>
+        <select class="form-select" aria-label="Default select example">
+        <option selected>---</option>
+        <option value="1">2020</option>
+        <option value="2">2021</option>
+        <option value="3">2022</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="inputDescripcion" class="form-label">Descripcion</label>
+        <input type="text" placeholder="Presupuesto del Año 2xxx" class="form-control" id="inputDescripcion">
+    </div>
+
+    <div class="col-md-4">
+        <label for="inputEstado" class="form-label">Estado</label>
+        <select class="form-select" aria-label="Default select example">
+        <option selected>---</option>
+        <option value="1">Activo</option>
+        <option value="2">Inactivo</option>
+        </select>
+    </div>
+
+
+
+
+    <br> <h5>RUBROS</h5>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Seleccionar</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Naturaleza</th>
+      <th scope="col">Valor Asignado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Pago de Servicios Basicos</td>
+      <td>GASTO</td>
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Alquiler de Oficinas</td>
+      <td>INGRESO</td>
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Multas por Retrasos</td>
+      <td>INGRESO</td>
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Pago de Horas Extras</td>
+      <td>GASTO</td>
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Ventas de Productos</td>
+      <td>INGRESO
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Inversiones</td>
+      <td>INGRESO</td>
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck"></div></th>
+      <td>Servicios Legales</td>
+      <td>GASTO</td>
+      <td><div class="input-group md-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)">
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}
